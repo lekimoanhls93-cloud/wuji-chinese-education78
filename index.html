@@ -2445,11 +2445,9 @@ function _ldGetCorrectAnswer(q) {
 
 function _ldNormalize(s) {
   return s
-    .trim()
     .toLowerCase()
-    .replace(/[.,!?:;"'。，！？：；「」《》]/g, '')
-    .replace(/\s+/g, ' ')
-    .trim();
+    .replace(/[，。、！？：；「」『』《》〈〉【】（）\.,!?:;'"`\-_~+=()\[\]{}<>\/\\|·…—]/g, '')
+    .replace(/\s+/g, '');
 }
 
 function _ldShowDetail(q) {
